@@ -3,7 +3,7 @@
 <template>
  <div class="container">
   <div class="card" v-if="show">
-   <h2 v-color:[type].blinc="myColor"> дерективы </h2>
+   <h2 v-color:[type].blink.hover="myColor"> дерективы </h2>
    <label for="int">Активный по умолчанию</label>
    <div class="form-control">
     <input v-focus type="text" id="int" >
@@ -27,11 +27,11 @@ export default {
       show: true
     }
   },
-  mounted() {
-    setTimeout(() => {
-      this.show = false
-    }, 3000)
-  },
+  // mounted() {
+  //   setTimeout(() => {
+  //     this.show = false
+  //   }, 3000)
+  //},
 
     directives: {
         focus: focusDirective,
