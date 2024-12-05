@@ -6,7 +6,7 @@
    <h2> дерективы </h2>
    <label for="int">Активный по умолчанию</label>
    <div class="form-control">
-    <input type="text" id="int" >
+    <input v-focus type="text" id="int" >
    </div>
   </div>
  </div>
