@@ -3,7 +3,7 @@
 <template>
  <div class="container">
   <div class="card">
-   <h2 v-color:[type]="myColor"> дерективы </h2>
+   <h2 v-color:[type].blinc="myColor"> дерективы </h2>
    <label for="int">Активный по умолчанию</label>
    <div class="form-control">
     <input v-focus type="text" id="int" >
