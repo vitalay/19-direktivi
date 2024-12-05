@@ -2,7 +2,7 @@
 
 <template>
  <div class="container">
-  <div class="card">
+  <div class="card" v-if="show">
    <h2 v-color:[type].blinc="myColor"> дерективы </h2>
    <label for="int">Активный по умолчанию</label>
    <div class="form-control">
@@ -23,8 +23,14 @@ export default {
   data() {
     return {
       myColor: 'red',
-      type: 'color'
+      type: 'color',
+      show: true
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.show = false
+    }, 3000)
   },
 
     directives: {

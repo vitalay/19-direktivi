@@ -1,3 +1,5 @@
+let interval
+
 export default {
 mounted(el, binding) {
     console.log(binding);
@@ -7,7 +9,7 @@ mounted(el, binding) {
 
 if (binding.modifiers.blinc) {
    let flag = true
-  setInterval( () => {
+   interval = setInterval( () => {
  el.style.color = flag ? '#fff' : binding.value
   flag =!flag 
   },  1000 )
@@ -19,6 +21,13 @@ if (binding.modifiers.blinc) {
 updated(el, binding) {
   
 el.style[binding.arg] = binding.value
+},
+
+unmounted() {
+    if (interval) {
+    clearInterval(interval)
+    }
 }
+
 }
     
