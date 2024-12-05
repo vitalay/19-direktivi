@@ -4,7 +4,11 @@
 <div class="container">
 
 <div class="card">
-  <h2>как работают плагины в vue?</h2>
+  <h2>{{ $i18n('app.title') }}</h2>
+ 
+
+  <button class="btn" @click="changeLang" >переключить ЯЗЫК</button>
+
 </div>
  </div>
 </template>
@@ -13,9 +17,17 @@
 import focusDirective from './focusDirective.js'
 import colorDirective from './colorDirectives.js'
 
-export default {
+export default { 
+  inject: ['changeI18n'],
   
+methods: {
 
+  changeLang() {
+    this.changeI18n('en')
+    this.$forceUpdate()
+  
+  }
+}
 
 }
 
