@@ -2,14 +2,12 @@ export default {
 mounted(el, binding) {
     console.log(binding);
     console.log(el)
- el.style.color = binding.value
+ el.style[binding.arg] = binding.value
 },
 
 updated(el, binding) {
-    console.log(binding);
-    console.log(el)
-
-el.style.color = binding.value
+  
+el.style[binding.arg] = binding.value
 }
 }
     
