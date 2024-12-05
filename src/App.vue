@@ -12,7 +12,15 @@
  </div>
 </template>
 
-<script setup>
+<script>
+import focusDirective from './focusDirective.js'
+
+export default {
+    directives: {
+        focus: focusDirective
+    }
+}
+
 
 </script>
 
