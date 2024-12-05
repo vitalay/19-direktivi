@@ -7,14 +7,15 @@ import transleytPlagen from './transleytPlagen'
  const app = createApp(App)
  const ru = {
     app: {
-        title: 'как работают плагины в vue?'
-        
+        title: 'как работают плагины в vue?',
+        changeBtn: 'переключить ЯЗЫК'
     }
  }
 
  const en = {
     app: {
-        title: 'How do plugins work in Vue?'
+        title: 'How do plugins work in Vue?',
+        changeBtn: 'switch language'
     }
  }
 // .directive('focus', {

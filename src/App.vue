@@ -7,7 +7,7 @@
   <h2>{{ $i18n('app.title') }}</h2>
  
 
-  <button class="btn" @click="changeLang" >переключить ЯЗЫК</button>
+  <button class="btn" @click="changeLang" >{{ $i18n('app.changeBtn') }}</button>
 
 </div>
  </div>
