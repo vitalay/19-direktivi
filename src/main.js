@@ -2,13 +2,14 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import transleytPlagen from './transleytPlagen'
 
-createApp(App)
+ const app = createApp(App)
 
 // .directive('focus', {
 //     mounted(el) {
 //         el.focus()
 //     }
 // })
-
-.mount('#app')
+app.use(transleytPlagen)
+app.mount('#app')
