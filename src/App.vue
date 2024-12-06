@@ -13,6 +13,7 @@
   <teleport to="body"> 
   <app-model 
      v-if="model"
+     
      @close="model = false"
     
      ></app-model>
