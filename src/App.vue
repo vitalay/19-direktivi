@@ -8,18 +8,27 @@
  
 
   <button class="btn" @click="changeLang" >{{ $i18n('app.changeBtn') }}</button>
-
+  <button class="btn primary" @click="model = true">Открыть модалку</button>
+     <app-model 
+     v-if="model"
+     @close="model = false"
+    
+     ></app-model>
 </div>
  </div>
 </template>
 
 <script>
-import focusDirective from './focusDirective.js'
-import colorDirective from './colorDirectives.js'
-
+//import focusDirective from './focusDirective.js'
+//import colorDirective from './colorDirectives.js'
+import AppModel from './AppModel.vue';
 export default { 
   inject: ['changeI18n'],
-  
+  data() {
+    return {
+      model: false
+    }
+  },
 methods: {
 
   changeLang() {
@@ -27,10 +36,12 @@ methods: {
     this.$forceUpdate()
   
   }
-}
+},
+components: {
+  AppModel
 
 }
-
+}
 
 </script>
 
