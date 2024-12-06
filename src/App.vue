@@ -9,11 +9,14 @@
 
   <button class="btn" @click="changeLang" >{{ $i18n('app.changeBtn') }}</button>
   <button class="btn primary" @click="model = true">Открыть модалку</button>
-     <app-model 
+     
+  <teleport to="body"> 
+  <app-model 
      v-if="model"
      @close="model = false"
     
      ></app-model>
+     </teleport>
 </div>
  </div>
 </template>
